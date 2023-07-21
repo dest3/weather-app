@@ -5,6 +5,7 @@
 :root{
     --bg-color:#2C2C2C;
     --text-color:#F3F6F5;
+    --acent-color:purple;
     font-size: 18px;
 }
 
@@ -31,6 +32,12 @@ footer{
     width: 100%;
     text-align: center;
 }
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* justify-content: space-evenly; */
+}
 
 .search-form{
     margin: 20px 20px;
@@ -56,23 +63,26 @@ footer{
 }
 
 .weather-card{
+    align-self: center;
     margin: 20px 20px;
     background-color: var(--text-color);
     color: var(--bg-color);
     padding: 20px;
     text-align: center;
-    border-radius: 5px;
-    display: none;
+    border-radius: 10px;
+    width: 200px;
+    /* display: none; */
 }
 
 .city{
-    font-size: 2.5rem;
+    font-size: 2.7rem;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
+    color: var(--acent-color);
 }
 
 .date{
-    font-size: 0.9rem;
+    font-size: 1.3rem;
     margin-bottom: 2rem;
 }
 
@@ -96,4 +106,17 @@ footer{
 .weather{
     font-size: 1.8rem;
     margin-bottom: 1rem;
+}
+
+.basurero{
+    width: 250px;
+    height: 250px;
+    outline: var(--text-color);
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    align-self: end;
+    margin: 20px 20px;
+    border-radius: 5px;
+    text-align:center;
+    
 }

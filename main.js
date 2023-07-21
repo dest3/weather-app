@@ -30,11 +30,11 @@ async function search(query) {
         const response = await fetch(`${api.url}q=${query}&appid=${api.key}`);
         const data = await response.json();
         card.style.display = 'block';
-        city.innerHTML = `${data.name}, ${data.sys.country}`;
-        date.innerHTML = (new Date()).toLocaleDateString();
-        temp.innerHTML = `${toCelsius(data.main.temp)}c`;
-        weather.innerHTML = data.weather[0].description;
-        range.innerHTML = `${toCelsius(data.main.temp_min)} / ${toCelsius(data.main.temp_max)}`;
+        city.innerText = `${data.name}, ${data.sys.country}`;
+        date.innerText = (new Date()).toLocaleDateString();
+        temp.innerText = `${toCelsius(data.main.temp)}c`;
+        weather.innerText = data.weather[0].description;
+        range.innerText = `${toCelsius(data.main.temp_min)} / ${toCelsius(data.main.temp_max)}`;
         updateImage(data);
     } catch (error) {
         //en caso de error notifica por consola y alerta
