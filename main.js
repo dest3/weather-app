@@ -12,6 +12,12 @@ const temp = document.getElementById('temp');
 const weather = document.getElementById('weather');
 const range = document.getElementById('range');
 
+//obtiene los datos de el form y la search box cuando se aprieta enter o enviar
+const form = document.getElementById('search-form');
+const searchbox = document.getElementById('searchbox');
+
+form.addEventListener('submit', onSubmit, true);
+
 function updateImage(data) {
     const temp = toCelsius(data.main.temp);
     let src = 'img/temp-mid.png';
@@ -48,13 +54,18 @@ function toCelsius(kelvin){
     return Math.round(kelvin - 273.15)
 }
 
-
 //obtiene la info puesta en el input de ciudad 
 function onSubmit(event) {
     event.preventDefault();
     search(searchbox.value);
 }
-//obtiene los datos de el form y la search box cuando se aprieta enter o enviar
-const form = document.getElementById('search-form');
-const searchbox = document.getElementById('searchbox');
-form.addEventListener('submit', onSubmit, true);
+
+// Sortablejs
+const lista = document.getElementById('grilla');
+Sortable.create(lista, {
+    animation: 150,
+    chosenClass: "select",
+    ghostClass: "fantasma",
+    dragClass: "drag",
+    
+})

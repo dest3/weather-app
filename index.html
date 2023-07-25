@@ -8,11 +8,10 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="main.js" defer></script>
     <title>app_de_clima</title>
 </head>
 <body>
-    <main>
+    <section class="main">
         <div class="search-form">
             <form id="search-form">
                 <div class="searchbox">
@@ -20,24 +19,49 @@
                 </div>
             </form>
         </div>    
-        <div class="weather-card" id="card" draggable="true">
+        <div class="weather-card" id="card">
             <div class="city" id="city" >arg, bs</div>
             <div class="date" id="date">17/7/2023</div>
             <div class="temperature" id="temperature">
-            <img src="img/temp-mid.png" alt="" class="temp-img" id="temp-img" draggable="false">
-            <div class="temp" id="temp">14c</div>
+                <img src="img/temp-mid.png" alt="" class="temp-img" id="temp-img" draggable="false">
+                <div class="temp" id="temp">14c</div>
             </div>
             <div class="weather" id="weather">soleado</div>
             <div class="range" id="range">10c / 20c</div>
         </div>
-
-        <div class="basurero" id="trash">
-            basura
-        </div>
-    </main>
+    </section>
     
-    <footer>
-        <p>creado por DEST3</p>
-    </footer>
+    <section class="grilla" id="grilla">
+        <div class="weather-card" id="card">
+            <div class="city" id="city" >arg, bs</div>
+            <div class="date" id="date">17/7/2023</div>
+            <div class="temperature" id="temperature">
+                <img src="img/temp-mid.png" alt="" class="temp-img" id="temp-img" draggable="false">
+                <div class="temp" id="temp">14c</div>
+            </div>
+            <div class="weather" id="weather">soleado</div>
+            <div class="range" id="range">10c / 20c</div>
+        </div>
+            
+        
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="main.js" defer></script>
 </body>
+<footer>
+    <p>creado por DEST3</p>
+</footer>
 </html>
