@@ -145,21 +145,14 @@ footer{
 .grilla .weather-card.select{
     transform: scale(1.02) rotate(-3deg);
     box-shadow: 0 0 20px var(--text-color); /* Corregimos la sintaxis aquí */
-    background-color: #2C2C2C;
+    opacity: 50%;
     cursor: move;
 }
 
-.grilla .weather-card.fantasma{
-    border: 2px dotted var(--acent-color);
-}
-
 .grilla .weather-card.drag{
-   opacity: 0;
+    opacity: 0;
 }
 
-.grilla.temperature.fantasma{
-    display: none;
-}
-.grilla.city.fantasma{
-    display: none;
+.grilla .weather-card.fantasma{
+    outline: 2px dotted var(--text-color);
 }

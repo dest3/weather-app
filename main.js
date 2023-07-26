@@ -63,9 +63,9 @@ function onSubmit(event) {
 // Sortablejs
 const lista = document.getElementById('grilla');
 Sortable.create(lista, {
-    animation: 150,
+    animation: 200,
     chosenClass: "select",
-    ghostClass: "fantasma",
     dragClass: "drag",
+    ghostClass: "fantasma"
     
 })
