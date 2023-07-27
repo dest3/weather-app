@@ -62,10 +62,25 @@ function onSubmit(event) {
 
 // Sortablejs
 const lista = document.getElementById('grilla');
-Sortable.create(lista, {
+new Sortable(lista, {
     animation: 200,
     chosenClass: "select",
     dragClass: "drag",
-    ghostClass: "fantasma"
+    ghostClass: "fantasma",
+    group: "board",
+    store: {
+        //guardamos el orden la lista
+        set: (sortable)=>{
+            const orden = sortable.toArray();
+            localStorage.setItem(sortable.options.group.name, orden.join('/'));
+        },
+        //obtenemos el orden de la lista
+        get: (sortable) =>{
+            const orden = localStorage.getItem(sortable.options.group.name)
+            return orden ? orden.split('/') : [] ;
+        }
+    },
     
 })
+
+
