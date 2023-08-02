@@ -60,39 +60,3 @@ function onSubmit(event) {
     search(searchbox.value);
 }
 
-// Sortablejs
-
-//obtenemos por ID la seccion en la que se encuentra la lista
-const lista = document.getElementById('grilla');
-//creamos la lista y aplicamos clases para cada accion
-Sortable.create(lista, {
-    animation: 200,
-    chosenClass: "select",
-    dragClass: "drag",
-    ghostClass: "fantasma",
-    group: "board",
-    store: {
-        //guardamos el orden la lista
-        set: (sortable)=>{
-            const board = sortable.toArray();
-            localStorage.setItem(sortable.options.group.name, board.join('/'));
-            console.log(board)
-        },
-        //obtenemos el orden de la lista
-        get: (sortable) =>{
-            const orden = localStorage.getItem(sortable.options.group.name)
-            console.log(orden)
-            return orden ? orden.split('/') : [] ;
-        }
-    }, 
-});
-
-//obtenemos por ID la seccion en la que se crean las tarjetas
-const tarjeta = document.getElementById('tarjeta');
-new Sortable(tarjeta, {
-    group: {
-        name: 'shared',
-        pull: 'clone'
-    },
-    animation: 150
-});
