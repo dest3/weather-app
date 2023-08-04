@@ -60,3 +60,62 @@ function onSubmit(event) {
     search(searchbox.value);
 }
 
+// Obtener el botón por su ID
+const botonGuardar = document.getElementById('guardar');
+
+// Variable para guardar el contenido de la tarjeta
+let contenidoTarjeta;
+
+// Agregar un evento que se activa al hacer click
+botonGuardar.addEventListener('click', function() {
+    // Obtener el contenido HTML de la tarjeta
+    const tarjetaElement = document.getElementById('tarjeta');
+    contenidoTarjeta = tarjetaElement.innerHTML;
+    console.log("Botón Guardar presionado. Contenido de la tarjeta:", contenidoTarjeta);
+    let divlleno =false;
+    // Recorrer cada div de la sección "grilla"
+    const divsGrilla = document.querySelectorAll('.grilla > div');
+    divsGrilla.forEach(div => {
+        // Verificar si el div está vacío
+        if (!divlleno && div.innerHTML.trim() === '') {
+            // Si está vacío, asignarle el contenido de la tarjeta guardada
+            div.innerHTML = contenidoTarjeta;
+            divlleno = true;
+        }
+    });
+    // Guardar el contenido de la "grilla" en el localStorage
+    guardarGrilla();
+});
+
+
+// Función para guardar el contenido de la "grilla" en el localStorage
+function guardarGrilla() {
+    // Recorrer cada div de la sección "grilla"
+    const divsGrilla = document.querySelectorAll('.grilla > div');
+    const contenidoDivs = Array.from(divsGrilla).map(div => div.innerHTML);
+    localStorage.setItem('grillaContenido', JSON.stringify(contenidoDivs));
+}
+
+// Función para cargar el contenido de la "grilla" desde el localStorage
+function cargarGrilla() {
+    const contenidoGrilla = JSON.parse(localStorage.getItem('grillaContenido'));
+    if (contenidoGrilla) {
+        const divsGrilla = document.querySelectorAll('.grilla > div');
+        divsGrilla.forEach((div, index) => {
+            div.innerHTML = contenidoGrilla[index];
+        });
+    }
+}
+
+// Llamar a la función cargarGrilla al cargar la página para restaurar el estado de la "grilla"
+window.addEventListener('DOMContentLoaded', cargarGrilla);
+
+// Obtener el botón por su ID
+const botonReset = document.getElementById('reset');
+
+botonReset.addEventListener('click', function() {
+    // Resetear el localStorage y dejarlo vacío
+    localStorage.clear();
+    // Luego, recargar la página para que la "grilla" vuelva a estar vacía
+    window.location.reload();
+});

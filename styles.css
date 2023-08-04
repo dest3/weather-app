@@ -15,6 +15,11 @@ body{
     color: var(--text-color);
 }
 
+main{
+    display: flex;
+    flex-direction: column;
+}
+
 a{
     color:var(--text-color);
 }
@@ -32,10 +37,29 @@ footer{
     text-align: center;
 }
 
-.main{
+.SC-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; /* Agregamos esta línea para centrar horizontalmente */
+}
+
+.BT-guardar {
+    height: 40px;
+    width: 60px;
+    padding: 0.5rem; /* Ajustamos el padding para que ocupe menos espacio */
+    border-radius: 5px;
+    align-self: center;
+    margin-top: 10px;
+}
+
+.BT-reset {
+    height: 40px;
+    width: 60px;
+    padding: 0.5rem; /* Ajustamos el padding para que ocupe menos espacio */
+    border-radius: 5px;
+    align-self: center;
+    margin-top: 10px;
 }
 
 .search-form{
@@ -73,7 +97,6 @@ footer{
     text-align: center;
     border-radius: 10px;
     width: 150px;
-    cursor: move;
     /* display: none; */
     
 }
@@ -133,6 +156,7 @@ footer{
 
 .grilla{
     display: grid;
+    justify-content: center;
     padding: 1rem;
     gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
