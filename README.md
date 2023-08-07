@@ -23,6 +23,7 @@ WIP
 
 ## Uso
 
+URL: https://wheater-cards.netlify.app/
 1. Ingresa el nombre de una ciudad en la caja de búsqueda.
 2. Presiona Enter o el botón de búsqueda para obtener el clima actual de la ciudad ingresada.
 3. Arrastra y suelta las tarjetas de clima en tu "board" para organizarlas como desees.
