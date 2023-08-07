@@ -17,7 +17,7 @@ body{
 
 main{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
 }
 
 a{
@@ -97,7 +97,7 @@ footer{
     text-align: center;
     border-radius: 10px;
     width: 150px;
-    /* display: none; */
+    display: none;
     
 }
 
@@ -147,7 +147,7 @@ footer{
 
 .grilla > div {
     border-radius: 10px;
-    
+    justify-content: center;
     border: 2px solid var(--text-color);
     width: 190px;
     padding: 5px;

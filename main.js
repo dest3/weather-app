@@ -119,3 +119,13 @@ botonReset.addEventListener('click', function() {
     // Luego, recargar la página para que la "grilla" vuelva a estar vacía
     window.location.reload();
 });
+
+
+const grilla = document.getElementById('grilla')
+
+new Sortable(grilla, {
+    animation: 200,
+    chosenClass: "select",
+    dragClass: "drag",
+    ghostClass: "fantasma"
+});
