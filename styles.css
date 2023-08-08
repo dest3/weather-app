@@ -51,6 +51,7 @@ footer{
     border-radius: 5px;
     align-self: center;
     margin-top: 10px;
+    display: none;
 }
 
 .BT-reset {
@@ -72,6 +73,11 @@ footer{
     background-color: var(--text-color);
     max-width: 480px;
     margin: 0px auto;
+}
+
+.search-button{
+    width: 60px;
+    height: 30px;
 }
 
 .search{

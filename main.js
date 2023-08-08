@@ -11,7 +11,7 @@ const tempimg = document.getElementById('temp-img');
 const temp = document.getElementById('temp');
 const weather = document.getElementById('weather');
 const range = document.getElementById('range');
-
+const guardar = document.getElementById('guardar')
 //obtiene los datos de el form y la search box cuando se aprieta enter o enviar
 const form = document.getElementById('search-form');
 const searchbox = document.getElementById('searchbox');
@@ -36,6 +36,7 @@ async function search(query) {
         const response = await fetch(`${api.url}q=${query}&appid=${api.key}`);
         const data = await response.json();
         card.style.display = 'block';
+        guardar.style.display = 'block';
         city.innerText = `${data.name}, ${data.sys.country}`;
         date.innerText = (new Date()).toLocaleDateString();
         temp.innerText = `${toCelsius(data.main.temp)}c`;
