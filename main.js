@@ -1,7 +1,7 @@
 //creo una constante llamada api donde gaurdo la url de la api con la key personal de la misma 
 const api = {
     key: '0fc45feca7f54eeaeab4eb8a82aad712',
-    url: 'http://api.openweathermap.org/data/2.5/weather?'
+    url: 'https://api.openweathermap.org/data/2.5/weather?'
 };
 //obtengo los elementos por el id del html para crear constantes para luego poder actalizarlos
 const card = document.getElementById('card')
