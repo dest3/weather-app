@@ -21,9 +21,9 @@ form.addEventListener('submit', onSubmit, true);
 function updateImage(data) {
     const temp = toCelsius(data.main.temp);
     let src = 'img/temp-mid.png';
-    if (temp> 26){
+    if (temp > 26) {
         scr = 'img/temp-high.png';
-    } else if (temp < 20){
+    } else if (temp < 20) {
         src = 'img/temp-low.png'
     }
     tempimg.src = src;
@@ -51,7 +51,7 @@ async function search(query) {
 }
 
 //convierte la temperatura de kelvin a centigrados
-function toCelsius(kelvin){
+function toCelsius(kelvin) {
     return Math.round(kelvin - 273.15)
 }
 
@@ -68,12 +68,12 @@ const botonGuardar = document.getElementById('guardar');
 let contenidoTarjeta;
 
 // Agregar un evento que se activa al hacer click
-botonGuardar.addEventListener('click', function() {
+botonGuardar.addEventListener('click', function () {
     // Obtener el contenido HTML de la tarjeta
     const tarjetaElement = document.getElementById('tarjeta');
     contenidoTarjeta = tarjetaElement.innerHTML;
     console.log("Botón Guardar presionado. Contenido de la tarjeta:", contenidoTarjeta);
-    let divlleno =false;
+    let divlleno = false;
     // Recorrer cada div de la sección "grilla"
     const divsGrilla = document.querySelectorAll('.grilla > div');
     divsGrilla.forEach(div => {
@@ -114,7 +114,7 @@ window.addEventListener('DOMContentLoaded', cargarGrilla);
 // Obtener el botón por su ID
 const botonReset = document.getElementById('reset');
 
-botonReset.addEventListener('click', function() {
+botonReset.addEventListener('click', function () {
     // Resetear el localStorage y dejarlo vacío
     localStorage.clear();
     // Luego, recargar la página para que la "grilla" vuelva a estar vacía

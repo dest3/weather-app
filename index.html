@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +9,29 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <title>app_de_clima</title>
+    <title>weather</title>
 </head>
+
 <body>
-    <header>
+    
         <div class="search-form">
             <form id="search-form">
                 <div class="searchbox">
+                    <i class="fa-solid fa-location-dot"></i>
                     <input type="text" autocomplete="off" placeholder="Buscar ciudad..." id="searchbox" class="search">
+                    <button class="fa-solid fa-magnifying-glass"></button>
                 </div>
-                <button id="search-button" class="search-button">Buscar</button>
             </form>
-        </div>    
-    </header>
+            <button id="search-button" class="search-button">Buscar</button>
+        </div>
     
+
     <main>
-        
-       <section class="SC-card">
+
+        <section class="SC-card">
             <div id="tarjeta" class="tarjeta">
                 <div class="weather-card" id="card">
-                    <div class="city" id="city" >arg, bs</div>
+                    <div class="city" id="city">arg, bs</div>
                     <div class="date" id="date">17/7/2023</div>
                     <div class="temperature" id="temperature">
                         <img src="img/temp-mid.png" alt="" class="temp-img" id="temp-img" draggable="false">
@@ -38,32 +42,32 @@
                 </div>
             </div>
             <div>
-                
-                <input type="button" id="guardar" class="BT-guardar" value="GUARDAR" >
+
+                <input type="button" id="guardar" class="BT-guardar" value="GUARDAR">
             </div>
         </section>
-        
-        
+
+
         <section class="grilla" id="grilla">
-            
+
             <div id="a" class=""></div>
             <div id="b" class=""></div>
             <div id="c" class=""></div>
             <div id="d" class=""></div>
             <div id="e" class=""></div>
             <div id="f" class=""></div>
-            <div id="g" class=""></div>
-            
+
         </section>
-        
+
         <input type="button" class="BT-reset" id="reset" value="reset">
-        
+
     </main>
-    
+
     <footer>
         <p>creado por DEST3</p>
     </footer>
 </body>
 <script src="main.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+
 </html>
